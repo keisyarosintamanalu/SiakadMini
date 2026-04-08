@@ -1,0 +1,313 @@
+/* =================================================================
+   FILE: css/style.css (PINK THEME - SIAKAD MINI)
+   ================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Pastikan koneksi internet untuk font, atau pakai sans-serif */
+}
+
+body {
+    background-color: #fffafb;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+/* --- Global Elements & Buttons --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(255, 71, 149, 0.08);
+    border: 1px solid rgba(236, 72, 153, 0.1);
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #ec4899;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-full { display: block; width: 100%; }
+
+.btn-pink {
+    background: linear-gradient(135deg, #ec4899, #f43f5e);
+    color: white;
+}
+
+.btn-pink:hover {
+    background: linear-gradient(135deg, #f43f5e, #ec4899);
+}
+
+.btn-danger { background-color: #ef4444; color: white; }
+.btn-back { color: #ec4899; margin-bottom: 20px; display: inline-block; font-weight: 600; }
+.link-pink { color: #ec4899; font-weight: 500; }
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+.badge-pink { background-color: #ec4899; }
+.badge-purple { background-color: #d946ef; }
+
+.alert {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.alert-error { background-color: #fee2e2; color: #b91c1c; }
+.alert-success { background-color: #d1fae5; color: #047857; }
+
+.text-muted { color: #888; }
+.text-center { text-align: center; }
+.mt-15 { margin-top: 15px; }
+.mt-30 { margin-top: 30px; }
+.mb-15 { margin-bottom: 15px; }
+
+/* --- LOGIN PAGE STYLING (Gambar 2) --- */
+.login-body {
+    background-color: #fff0f5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.login-icon {
+    font-size: 3rem;
+    color: white;
+    background: linear-gradient(135deg, #ec4899, #d946ef);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.login-title { font-size: 2.2rem; color: #ec4899; margin-bottom: 5px; }
+.login-subtitle { color: #777; margin-bottom: 35px; }
+
+.demo-box {
+    background-color: #fff0f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 0.9rem;
+    border: 1px dashed rgba(236, 72, 153, 0.2);
+}
+.demo-title { font-weight: 600; color: #ec4899; margin-bottom: 8px; }
+
+/* --- DASHBOARD STYLING (Gambar 3) --- */
+.navbar {
+    background: linear-gradient(135deg, #ec4899, #d946ef);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+}
+
+.nav-brand { font-size: 1.5rem; font-weight: 700; }
+.nav-links { display: flex; gap: 20px; }
+.nav-link { color: rgba(255,255,255,0.8); font-weight: 500; font-size: 0.95rem; }
+.nav-link:hover, .nav-link.active { color: white; border-bottom: 2px solid white; padding-bottom: 2px; }
+
+.nav-user { display: flex; gap: 15px; align-items: center; }
+.btn-logout { background: white; color: #ec4899; font-size: 0.85rem; padding: 7px 15px; }
+
+.page-header { margin: 40px 0; }
+.header-icon { font-size: 2.5rem; color: #ec4899; }
+.subtitle { color: #666; font-size: 1.1rem; }
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.menu-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(236, 72, 153, 0.1);
+    box-shadow: 0 4px 10px rgba(236, 72, 153, 0.05);
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(236, 72, 153, 0.12);
+}
+
+.menu-icon {
+    font-size: 2rem;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.menu-card h3 { font-size: 1.3rem; margin-bottom: 8px; color: #333; }
+.menu-card p { color: #777; font-size: 0.95rem; }
+
+/* OOP Demo Styling */
+.oop-demo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.oop-demo-card {
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+}
+.oop-info { font-weight: 600; font-size: 0.95rem; color: #333; margin: 12px 0; }
+.oop-report {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    color: #444;
+}
+
+/* --- FORMS STYLING --- */
+.form-group { margin-bottom: 20px; text-align: left; }
+.form-group label { display: block; font-weight: 500; color: #ec4899; margin-bottom: 8px; }
+
+input[type="text"], input[type="password"], input[type="number"], select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(236, 72, 153, 0.2);
+    background-color: #fffafb;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #ec4899;
+    outline: none;
+    box-shadow: 0 0 5px rgba(236, 72, 153, 0.2);
+}
+
+input::placeholder { color: #bbb; font-size: 0.95rem; }
+
+.form-inline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 15px;
+    align-items: flex-end;
+}
+.form-btn-group { margin-bottom: 0; }
+
+/* --- TABLE STYLING --- */
+.table-responsive { overflow-x: auto; }
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.data-table th, .data-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f2f2f2;
+}
+.data-table th {
+    background-color: #ec4899;
+    color: white;
+    font-weight: 600;
+}
+.data-table tbody tr:hover { background-color: #fff0f5; }
+
+/* --- IPK GRID STYLING --- */
+.ipk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.ipk-card { display: flex; flex-direction: column; height: 100%; justify-content: space-between; margin-bottom: 0;}
+.ipk-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.ipk-body { border-top: 1px solid #eee; padding-top: 15px; }
+.ipk-score { font-size: 3rem; color: #ec4899; font-weight: 700; text-align: center; margin-bottom: 10px; }
+.ipk-score .value { }
+.ipk-score .label { display: block; font-size: 1rem; color: #666; font-weight: 400;}
+
+/* --- FOOTER STYLING --- */
+.footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+    color: #888;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+/* --- PRINT STYLE --- */
+@media print {
+    body { background: white; }
+    .navbar, .btn, .alert, .card-title, .form-inline-grid, .btn-full { display: none !important; }
+    .card { box-shadow: none; border: none; padding: 0; }
+    pre { border: 1px solid #ccc !important; background: white !important; font-size: 10pt; }
+}

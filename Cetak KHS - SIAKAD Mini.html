@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://localhost/siakadmini/SiakadMini/cetak_khs.php?nim=I43250858 -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetak KHS - SIAKAD Mini</title>
+    
+    <link rel="stylesheet" href="./Cetak KHS - SIAKAD Mini_files/style.css">
+    
+    <link rel="stylesheet" href="./Cetak KHS - SIAKAD Mini_files/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="http://localhost/siakadmini/SiakadMini/dashboard.php" class="nav-brand">🎓 SIAKAD Mini</a>
+            <div class="nav-links">
+                <a href="http://localhost/siakadmini/SiakadMini/dashboard.php" class="nav-link ">Dashboard</a>
+                <a href="http://localhost/siakadmini/SiakadMini/mahasiswa.php" class="nav-link ">Mahasiswa</a>
+                <a href="http://localhost/siakadmini/SiakadMini/matakuliah.php" class="nav-link ">Mata Kuliah</a>
+                <a href="http://localhost/siakadmini/SiakadMini/input_nilai.php" class="nav-link ">Input Nilai</a>
+                <a href="http://localhost/siakadmini/SiakadMini/hitung_ipk.php" class="nav-link ">Hitung IPK</a>
+                <a href="http://localhost/siakadmini/SiakadMini/cetak_khs.php" class="nav-link active">Cetak KHS</a>
+            </div>
+            <div class="nav-user">
+                <span class="nav-username">Halo, Dosen</span>
+                <a href="http://localhost/siakadmini/SiakadMini/logout.php" class="btn btn-logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+<div class="container">
+    <div class="no-print">
+        <a href="http://localhost/siakadmini/SiakadMini/dashboard.php" class="btn-back">← Kembali ke Dashboard</a>
+    </div>
+
+    <div class="page-header">
+        <h1>🖨️ Cetak Kartu Hasil Studi</h1>
+        <p class="subtitle">Pilih mahasiswa untuk mencetak laporan nilai akhir</p>
+    </div>
+
+    <div class="card no-print" style="margin-bottom: 30px;">
+        <form method="GET" action="http://localhost/siakadmini/SiakadMini/cetak_khs.php" style="display: flex; gap: 15px; align-items: flex-end;">
+            <div style="flex: 1;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Pilih Mahasiswa:</label>
+                <select name="nim" required="" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <option value="">-- Pilih Mahasiswa --</option>
+                                                                        <option value="2024001">
+                                2024001 - Andi Pratama                            </option>
+                                                    <option value="2024002">
+                                2024002 - Siti Nurhaliza                            </option>
+                                                    <option value="2024003">
+                                2024003 - Budi Santoso                            </option>
+                                                    <option value="I43250858" selected="">
+                                I43250858 - Keisya Rosinta Manalu                            </option>
+                                                            </select>
+            </div>
+            <button type="submit" class="btn btn-pink" style="padding: 10px 25px;">Tampilkan</button>
+        </form>
+    </div>
+
+                        
+            <div class="card khs-container" id="printArea">
+                <div style="text-align: center; margin-bottom: 30px; border-bottom: 2px solid #ec4899; padding-bottom: 10px;">
+                    <h2 style="margin: 0; color: #ec4899;">KARTU HASIL STUDI (KHS)</h2>
+                    <p style="margin: 5px 0;">Sistem Informasi Akademik Mini</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 120px auto; gap: 5px; margin-bottom: 20px; font-weight: 500;">
+                    <div>NIM</div><div>: I43250858</div>
+                    <div>Nama</div><div>: Keisya Rosinta Manalu</div>
+                    <div>Prodi</div><div>: Bisnis Digital</div>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Mata Kuliah</th>
+                            <th>SKS</th>
+                            <th>Nilai</th>
+                            <th>Bobot</th>
+                            <th>SKS x Bobot</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                    <tr>
+                                    <td>1</td>
+                                    <td>Pemrograman Berorientasi Objek</td>
+                                    <td>4</td>
+                                    <td><strong>A</strong></td>
+                                    <td>4</td>
+                                    <td>16</td>
+                                </tr>
+                                                                        </tbody>
+                    <tfoot>
+                        <tr style="background: #fdf2f8; font-weight: bold;">
+                            <td colspan="2" style="text-align: right;">Total SKS:</td>
+                            <td>4</td>
+                            <td colspan="2" style="text-align: right;">IPK:</td>
+                            <td>4.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <div style="margin-top: 30px; padding: 15px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #ec4899;">
+                    <h4 style="margin-top: 0;">💬 Pesan Sistem (OOP Output):</h4>
+                    <p style="font-family: monospace; margin-bottom: 0;">=== LAPORAN KHS ===
+Nama: Keisya Rosinta Manalu
+NIM: I43250858
+IPK: 4</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;" class="no-print">
+                <button onclick="window.print()" class="btn btn-pink" style="padding: 12px 30px; font-size: 16px; cursor: pointer;">
+                    🖨️ Cetak KHS ke PDF / Printer
+                </button>
+            </div>
+
+            </div>
+
+<style>
+    @media print {
+        .no-print { display: none !important; }
+        body { background: white; }
+        .card { border: none; box-shadow: none; }
+        .khs-container { padding: 0; }
+    }
+</style>
+
+</main></body></html>
